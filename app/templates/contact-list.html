@@ -1,0 +1,24 @@
+<section class="hero-unit">
+		<h1 ng-model="hello">{{ hello }}</h1>
+		<h3>Total number of contacts: {{ contacts.length }} </h3>
+                  		<h4>{{query}}</h4>
+
+		<select ng-model="orderProperty">
+			<option value="age">Age</option>
+			<option value="name">Name</option>	
+		</select>
+
+
+		<div class="row-fluid">
+			<div class="span2">
+				Search: <input ng-model="query" />
+			</div>
+		</div>
+
+		<ul ng-repeat="contact in contacts | filter:query | orderBy: orderProperty">
+			<li>
+				{{ contact.name }}, <small>{{ contact.email }}</small>
+				<a href="#/contacts/{{contacts.id}}">{{contact.name}}</a>
+	 		</li>
+		</ul>
+	</section>

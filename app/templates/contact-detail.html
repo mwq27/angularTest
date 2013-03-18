@@ -1,0 +1,13 @@
+<div class="hero-unit">
+	<ul>
+		<!-- ng-click is an angular Directive.  it could also be called as:
+			x-ng-click
+			data-ng-click
+			ng:click
+			ng_click
+		 -->
+		<li ng-click="showEmail('pop pop !!!!')">{{contact.age > 20 | checkmark}} {{contact.name}}</li>
+		<li>{{contact.age}}</li>
+		<li>{{contact.email}} <span id="changeme"></span></li>
+	</ul>
+</div>
